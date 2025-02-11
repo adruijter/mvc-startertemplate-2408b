@@ -20,6 +20,7 @@
                     <tr>
                         <th scope="col">Merk</th>
                         <th scope="col">Model</th>
+                        <th scope="col">Prijs</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,6 +28,7 @@
                         <tr>
                             <td><?= $smartphone->Merk; ?></td>
                             <td><?= $smartphone->Model; ?></td>
+                            <td><?= $smartphone->Prijs; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

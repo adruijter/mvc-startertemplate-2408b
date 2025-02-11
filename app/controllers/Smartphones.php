@@ -12,10 +12,10 @@ class Smartphones extends BaseController
     public function index()
     {
         /**
-         * Het $data-array geeft informatie mee aan de view-pagina
+         * Je roept de method getAllSmartphones aan van de smartphoneModel class
          */
         $results = $this->smartphoneModel->getAllSmartphones();
-
+        
         $data = [
             'title' => 'Smartphones!',
             'smartphones' => $results
