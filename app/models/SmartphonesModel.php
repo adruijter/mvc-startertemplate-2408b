@@ -18,6 +18,7 @@ class SmartphonesModel
         $sql = 'SELECT  SMPH.Merk
                        ,SMPH.Model
                        ,SMPH.Prijs
+                       ,SMPH.Geheugen
                 FROM smartphones as SMPH
                 ORDER BY SMPH.Prijs DESC';
 
