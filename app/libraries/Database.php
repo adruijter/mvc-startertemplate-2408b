@@ -53,6 +53,7 @@ class Database
         $this->statement = $this->dbHandler->prepare($sql);
     }
 
+    /** Wanneer je meerdere records verwacht dat gebruik je deze method */
     public function resultSet()
     {
         $this->statement->execute();
