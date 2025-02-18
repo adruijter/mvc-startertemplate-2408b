@@ -21,6 +21,7 @@
                         <th scope="col">Model</th>
                         <th scope="col">Prijs</th>
                         <th scope="col">Geheugen (GB)</th>
+                        <th scope="col">Besturingssysteem</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +31,7 @@
                             <td><?= $smartphone->Model; ?></td>
                             <td><?= $smartphone->Prijs; ?></td>
                             <td><?= $smartphone->Geheugen; ?></td>
+                            <td><?= $smartphone->Besturingssysteem; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

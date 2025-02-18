@@ -19,14 +19,14 @@ USE `Mvc_smartphone_2408B`;
 -- Step: 02
 -- ***************************************************************
 -- Doel : Maak een nieuwe tabel aan met de naam Smartphones
--- ***************************************************************
+-- ***************************************************************************
 -- Versie       Datum           Auteur              Omschrijving
 -- ******       *****           ******              ************
 -- 01           11-02-2025      Arjan de Ruijter    Tabel Smartphones
--- ***************************************************************
+-- ****************************************************************************
 -- Onderstaande velden toevoegen aan de tabel Smartphones
--- Merk, Model, Prijs, Geheugen, Besturingssysteem, Schermgrootte
--- ***************************************************************
+-- Merk, Model, Prijs, Geheugen, Besturingssysteem, Schermgrootte, Releasedatum
+-- ****************************************************************************
 
 CREATE TABLE Smartphones
 (
@@ -35,7 +35,9 @@ CREATE TABLE Smartphones
     ,Model              VARCHAR(50)                 NOT NULL
     ,Prijs              DECIMAL(6,2)                NOT NULL
     ,Geheugen           DECIMAL(4,0)                    NULL        DEFAULT NULL 
-    ,Besturingssysteem  VARCHAR(25)                 NOT NULL       				
+    ,Besturingssysteem  VARCHAR(25)                 NOT NULL
+    ,Schermgrootte		DECIMAL(4,2)				NOT NULL
+    ,Releasedatum		DATE 						NOT NULL
     ,IsActief           BIT                         NOT NULL        DEFAULT 1
     ,Opmerking          VARCHAR(255)                    NULL        DEFAULT NULL
     ,DatumAangemaakt    DATETIME(6)                 NOT NULL
@@ -59,15 +61,17 @@ INSERT INTO Smartphones
      ,Prijs
      ,Geheugen
      ,Besturingssysteem
+     ,Schermgrootte
+     ,Releasedatum
      ,IsActief
      ,Opmerking
      ,DatumAangemaakt
      ,DatumGewijzigd
 )
 VALUES
- ('Apple', 'iPhone 16 Pro', 1260, 512, 'iOS 18', 1, NULL, SYSDATE(6), SYSDATE(6)),
- ('Samsung', 'Galaxy S25 Ultra', 1324, 256, 'Android 15',  1, NULL, SYSDATE(6), SYSDATE(6)),
- ('Google', 'Pixel 9 Pro', 1152, 1000, 'Android 15', 1, NULL, SYSDATE(6), SYSDATE(6));
+ ('Apple', 'iPhone 16 Pro', 1260, 512, 'iOS 18', 6.7, '2024-09-14',  1, NULL, SYSDATE(6), SYSDATE(6)),
+ ('Samsung', 'Galaxy S25 Ultra', 1324, 256, 'Android 15', 8.1, '2024-09-20',  1, NULL, SYSDATE(6), SYSDATE(6)),
+ ('Google', 'Pixel 9 Pro', 1152, 1000, 'Android 15', 9.0, '2025-01-20', 1, NULL, SYSDATE(6), SYSDATE(6));
 
 
  

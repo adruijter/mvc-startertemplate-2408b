@@ -19,8 +19,9 @@ class SmartphonesModel
                        ,SMPH.Model
                        ,SMPH.Prijs
                        ,SMPH.Geheugen
+                       ,SMPH.Besturingssysteem
                 FROM smartphones as SMPH
-                ORDER BY SMPH.Prijs DESC';
+                ORDER BY SMPH.Prijs DESC, SMPH.Geheugen ASC';
 
         $this->db->query($sql);
 
