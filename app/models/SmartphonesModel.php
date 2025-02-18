@@ -20,8 +20,10 @@ class SmartphonesModel
                        ,SMPH.Prijs
                        ,SMPH.Geheugen
                        ,SMPH.Besturingssysteem
+                       ,SMPH.Schermgrootte
+                       ,DATE_FORMAT(SMPH.Releasedatum, "%d/%m/%Y") as Releasedatum
                 FROM smartphones as SMPH
-                ORDER BY SMPH.Prijs DESC, SMPH.Geheugen ASC';
+                ORDER BY SMPH.Prijs DESC, SMPH.Geheugen ASC, SMPH.Releasedatum DESC';
 
         $this->db->query($sql);
 

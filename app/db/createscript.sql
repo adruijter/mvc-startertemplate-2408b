@@ -25,7 +25,8 @@ USE `Mvc_smartphone_2408B`;
 -- 01           11-02-2025      Arjan de Ruijter    Tabel Smartphones
 -- ****************************************************************************
 -- Onderstaande velden toevoegen aan de tabel Smartphones
--- Merk, Model, Prijs, Geheugen, Besturingssysteem, Schermgrootte, Releasedatum
+-- Merk, Model, Prijs, Geheugen, Besturingssysteem, 
+-- Schermgrootte, Releasedatum, Kleur
 -- ****************************************************************************
 
 CREATE TABLE Smartphones

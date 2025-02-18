@@ -22,6 +22,8 @@
                         <th scope="col">Prijs</th>
                         <th scope="col">Geheugen (GB)</th>
                         <th scope="col">Besturingssysteem</th>
+                        <th scope="col">Schermgrootte</th>
+                        <th scope="col">Releasedatum</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,6 +34,8 @@
                             <td><?= $smartphone->Prijs; ?></td>
                             <td><?= $smartphone->Geheugen; ?></td>
                             <td><?= $smartphone->Besturingssysteem; ?></td>
+                            <td><?= $smartphone->Schermgrootte . " inch"; ?></td>
+                            <td><?= $smartphone->Releasedatum; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
