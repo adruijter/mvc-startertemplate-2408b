@@ -34,7 +34,8 @@ CREATE TABLE Smartphones
     ,Merk               VARCHAR(50)                 NOT NULL
     ,Model              VARCHAR(50)                 NOT NULL
     ,Prijs              DECIMAL(6,2)                NOT NULL
-    ,Geheugen           DECIMAL(4,0)                    NULL        DEFAULT NULL        				
+    ,Geheugen           DECIMAL(4,0)                    NULL        DEFAULT NULL 
+    ,Besturingssysteem  VARCHAR(25)                 NOT NULL       				
     ,IsActief           BIT                         NOT NULL        DEFAULT 1
     ,Opmerking          VARCHAR(255)                    NULL        DEFAULT NULL
     ,DatumAangemaakt    DATETIME(6)                 NOT NULL
@@ -57,15 +58,16 @@ INSERT INTO Smartphones
      ,Model
      ,Prijs
      ,Geheugen
+     ,Besturingssysteem
      ,IsActief
      ,Opmerking
      ,DatumAangemaakt
      ,DatumGewijzigd
 )
 VALUES
- ('Apple', 'iPhone 16 Pro', 1260, 512, 1, NULL, SYSDATE(6), SYSDATE(6)),
- ('Samsung', 'Galaxy S25 Ultra', 1324, 256, 1, NULL, SYSDATE(6), SYSDATE(6)),
- ('Google', 'Pixel 9 Pro', 1152, 1000, 1, NULL, SYSDATE(6), SYSDATE(6));
+ ('Apple', 'iPhone 16 Pro', 1260, 512, 'iOS 18', 1, NULL, SYSDATE(6), SYSDATE(6)),
+ ('Samsung', 'Galaxy S25 Ultra', 1324, 256, 'Android 15',  1, NULL, SYSDATE(6), SYSDATE(6)),
+ ('Google', 'Pixel 9 Pro', 1152, 1000, 'Android 15', 1, NULL, SYSDATE(6), SYSDATE(6));
 
 
  
