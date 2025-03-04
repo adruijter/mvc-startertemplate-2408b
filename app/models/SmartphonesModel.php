@@ -22,6 +22,7 @@ class SmartphonesModel
                        ,SMPH.Besturingssysteem
                        ,SMPH.Schermgrootte
                        ,DATE_FORMAT(SMPH.Releasedatum, "%d/%m/%Y") as Releasedatum
+                       ,SMPH.Gewicht
                 FROM smartphones as SMPH
                 ORDER BY SMPH.Prijs DESC, SMPH.Geheugen ASC, SMPH.Releasedatum DESC';
 

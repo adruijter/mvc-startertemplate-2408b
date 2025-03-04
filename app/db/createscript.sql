@@ -26,7 +26,7 @@ USE `Mvc_smartphone_2408B`;
 -- ****************************************************************************
 -- Onderstaande velden toevoegen aan de tabel Smartphones
 -- Merk, Model, Prijs, Geheugen, Besturingssysteem, 
--- Schermgrootte, Releasedatum, Kleur
+-- Schermgrootte, Releasedatum, Gewicht, Simlockvrij
 -- ****************************************************************************
 
 CREATE TABLE Smartphones
@@ -38,7 +38,8 @@ CREATE TABLE Smartphones
     ,Geheugen           DECIMAL(4,0)                NOT NULL         
     ,Besturingssysteem  VARCHAR(25)                 NOT NULL
     ,Schermgrootte	    DECIMAL(4,2)			  NOT NULL
-    ,Releasedatum	    DATE 					  NOT NULL
+    ,Releasedatum	    DATE 					  NOT NULL     
+    ,Gewicht            DECIMAL(3,0)                NOT NULL            
     ,IsActief           BIT                         NOT NULL        DEFAULT 1
     ,Opmerking          VARCHAR(255)                    NULL        DEFAULT NULL
     ,DatumAangemaakt    DATETIME(6)                 NOT NULL
@@ -64,15 +65,17 @@ INSERT INTO Smartphones
      ,Besturingssysteem
      ,Schermgrootte
      ,Releasedatum
+     ,Gewicht
+     
      ,IsActief
      ,Opmerking
      ,DatumAangemaakt
      ,DatumGewijzigd
 )
 VALUES
- ('Apple', 'iPhone 16 Pro', 1260, 512, 'iOS 18', 6.7, '2024-09-14',  1, NULL, SYSDATE(6), SYSDATE(6)),
- ('Samsung', 'Galaxy S25 Ultra', 1324, 256, 'Android 15', 8.1, '2024-09-20',  1, NULL, SYSDATE(6), SYSDATE(6)),
- ('Google', 'Pixel 9 Pro', 1152, 1000, 'Android 15', 9.0, '2025-01-20', 1, NULL, SYSDATE(6), SYSDATE(6));
+ ('Apple', 'iPhone 16 Pro', 1260, 512, 'iOS 18', 6.7, '2024-09-14', 234,  1, NULL, SYSDATE(6), SYSDATE(6)),
+ ('Samsung', 'Galaxy S25 Ultra', 1324, 256, 'Android 15', 8.1, '2024-09-20', 123,  1, NULL, SYSDATE(6), SYSDATE(6)),
+ ('Google', 'Pixel 9 Pro', 1152, 1000, 'Android 15', 9.0, '2025-01-20', 280, 1, NULL, SYSDATE(6), SYSDATE(6));
 
 
  
