@@ -17,7 +17,7 @@ class SmartphonesModel
     {
         $sql = 'SELECT  SMPH.Merk
                        ,SMPH.Model
-                       ,REPLACE(SMPH.Prijs, ".", ",") as Prijs
+                       ,FORMAT(SMPH.Prijs, 2, "nl_NL") as Prijs
                        ,SMPH.Geheugen
                        ,SMPH.Besturingssysteem
                        ,REPLACE(SMPH.Schermgrootte, ".", ",") as Schermgrootte
