@@ -35,10 +35,10 @@ CREATE TABLE Smartphones
     ,Merk               VARCHAR(50)                 NOT NULL
     ,Model              VARCHAR(50)                 NOT NULL
     ,Prijs              DECIMAL(6,2)                NOT NULL
-    ,Geheugen           DECIMAL(4,0)                    NULL        DEFAULT NULL 
+    ,Geheugen           DECIMAL(4,0)                NOT NULL         
     ,Besturingssysteem  VARCHAR(25)                 NOT NULL
-    ,Schermgrootte		DECIMAL(4,2)				NOT NULL
-    ,Releasedatum		DATE 						NOT NULL
+    ,Schermgrootte	    DECIMAL(4,2)			  NOT NULL
+    ,Releasedatum	    DATE 					  NOT NULL
     ,IsActief           BIT                         NOT NULL        DEFAULT 1
     ,Opmerking          VARCHAR(255)                    NULL        DEFAULT NULL
     ,DatumAangemaakt    DATETIME(6)                 NOT NULL

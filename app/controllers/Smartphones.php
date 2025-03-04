@@ -17,7 +17,7 @@ class Smartphones extends BaseController
         $results = $this->smartphoneModel->getAllSmartphones();
         
         $data = [
-            'title' => 'Smartphones!',
+            'title' => 'Smartphones',
             'smartphones' => $results
         ];
 
