@@ -17,11 +17,13 @@ class SmartphonesModel
     {
         $sql = 'SELECT  SMPH.Merk
                        ,SMPH.Model
-                       ,SMPH.Prijs
+                       ,REPLACE(SMPH.Prijs, ".", ",") as Prijs
                        ,SMPH.Geheugen
                        ,SMPH.Besturingssysteem
-                       ,SMPH.Schermgrootte
-                       ,DATE_FORMAT(SMPH.Releasedatum, "%d/%m/%Y") as Releasedatum
+                       ,REPLACE(SMPH.Schermgrootte, ".", ",") as Schermgrootte
+                       ,IF (SMPH.Simlockvrij = 1, "Ja", "Nee") as Simlockvrij
+                       ,SMPH.Gewicht
+                       ,DATE_FORMAT(SMPH.Releasedatum, "%d-%m-%Y") as Releasedatum
                 FROM smartphones as SMPH
                 ORDER BY SMPH.Prijs DESC, SMPH.Geheugen ASC, SMPH.Releasedatum DESC';
 
