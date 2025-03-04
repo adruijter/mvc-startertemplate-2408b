@@ -23,6 +23,7 @@ class SmartphonesModel
                        ,SMPH.Schermgrootte
                        ,DATE_FORMAT(SMPH.Releasedatum, "%d/%m/%Y") as Releasedatum
                        ,SMPH.Gewicht
+                       ,IF (Simlockvrij = 1, "Ja", "Nee") as Simlockvrij
                 FROM smartphones as SMPH
                 ORDER BY SMPH.Prijs DESC, SMPH.Geheugen ASC, SMPH.Releasedatum DESC';
 

@@ -25,6 +25,7 @@
                         <th scope="col">Schermgrootte</th>
                         <th scope="col">Releasedatum</th>
                         <th scope="col">Gewicht</th>
+                        <th scope="col">Simlockvrij</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,6 +39,7 @@
                             <td><?= $smartphone->Schermgrootte . " inch"; ?></td>
                             <td><?= $smartphone->Releasedatum; ?></td>
                             <td><?= $smartphone->Gewicht; ?></td>
+                            <td><?= $smartphone->Simlockvrij; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
