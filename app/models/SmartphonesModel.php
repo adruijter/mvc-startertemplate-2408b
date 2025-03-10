@@ -17,10 +17,10 @@ class SmartphonesModel
     {
         $sql = 'SELECT  SMPH.Merk
                        ,SMPH.Model
-                       ,SMPH.Prijs
+                       ,FORMAT(SMPH.Prijs, 2, "nl_NL") as Prijs
                        ,SMPH.Geheugen
                        ,SMPH.Besturingssysteem
-                       ,SMPH.Schermgrootte
+                       ,FORMAT(SMPH.Schermgrootte, 2, "nl_NL") as Schermgrootte
                        ,DATE_FORMAT(SMPH.Releasedatum, "%d/%m/%Y") as Releasedatum
                        ,SMPH.Gewicht
                        ,IF (Simlockvrij = 1, "Ja", "Nee") as Simlockvrij

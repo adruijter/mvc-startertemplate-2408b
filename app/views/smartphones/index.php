@@ -19,7 +19,7 @@
                     <tr>
                         <th scope="col">Merk</th>
                         <th scope="col">Model</th>
-                        <th scope="col">Prijs</th>
+                        <th scope="col">Prijs (&euro;)</th>
                         <th scope="col">Geheugen (GB)</th>
                         <th scope="col">Besturingssysteem</th>
                         <th scope="col">Schermgrootte</th>
