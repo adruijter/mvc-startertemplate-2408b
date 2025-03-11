@@ -3,17 +3,17 @@
 <div class="container mt-3">
 
     <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10">
+        <div class="col-0"></div>
+        <div class="col-12">
             <h3><?= $data['title']; ?></h3>
         </div>
-        <div class="col-1"></div>
+        <div class="col-0"></div>
     </div>
 
 
     <div class="row mt-3">
-        <div class="col-1"></div>
-        <div class="col-10">
+        <div class="col-0"></div>
+        <div class="col-12">
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
@@ -26,6 +26,7 @@
                         <th scope="col">Releasedatum</th>
                         <th scope="col">Gewicht(gr)</th>
                         <th scope="col">Simlockvrij</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,13 +41,14 @@
                             <td><?= $smartphone->Releasedatum; ?></td>
                             <td><?= $smartphone->Gewicht; ?></td>
                             <td><?= $smartphone->Simlockvrij; ?></td>
+                            <td><a href="<?= URLROOT; ?>/smartphones/delete/<?= $smartphone->Id; ?>"><i class="bi bi-x-circle-fill text-danger"></a></i></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
             </table>
             <a href="<?= URLROOT; ?>/homepages/index">terug</a>
         </div>
-        <div class="col-1"></div>
+        <div class="col-0"></div>
 
 </div>
 

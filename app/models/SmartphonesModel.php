@@ -15,7 +15,8 @@ class SmartphonesModel
 
     public function getAllSmartphones()
     {
-        $sql = 'SELECT  SMPH.Merk
+        $sql = 'SELECT  SMPH.Id
+                       ,SMPH.Merk
                        ,SMPH.Model
                        ,FORMAT(SMPH.Prijs, 2, "nl_NL") as Prijs
                        ,SMPH.Geheugen
@@ -31,4 +32,16 @@ class SmartphonesModel
 
         return $this->db->resultSet();
     }
+
+    public function delete($id)
+    {
+        $sql = 'DELETE FROM Smartphones WHERE Id = :id';
+
+        $this->db->query($sql);
+        $this->db->bind(':id', $id, PDO::PARAM_INT);
+
+        $this->db->execute();
+    }
+
+
 }
