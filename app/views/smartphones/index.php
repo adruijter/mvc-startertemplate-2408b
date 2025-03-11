@@ -19,12 +19,12 @@
                     <tr>
                         <th scope="col">Merk</th>
                         <th scope="col">Model</th>
-                        <th scope="col">Prijs (&euro;)</th>
-                        <th scope="col">Geheugen (GB)</th>
+                        <th scope="col">Prijs(&euro;)</th>
+                        <th scope="col">Geheugen(GB)</th>
                         <th scope="col">Besturingssysteem</th>
-                        <th scope="col">Schermgrootte</th>
+                        <th scope="col">Schermgrootte(inch)</th>
                         <th scope="col">Releasedatum</th>
-                        <th scope="col">Gewicht</th>
+                        <th scope="col">Gewicht(gr)</th>
                         <th scope="col">Simlockvrij</th>
                     </tr>
                 </thead>
@@ -36,7 +36,7 @@
                             <td><?= $smartphone->Prijs; ?></td>
                             <td><?= $smartphone->Geheugen; ?></td>
                             <td><?= $smartphone->Besturingssysteem; ?></td>
-                            <td><?= $smartphone->Schermgrootte . " inch"; ?></td>
+                            <td><?= $smartphone->Schermgrootte; ?></td>
                             <td><?= $smartphone->Releasedatum; ?></td>
                             <td><?= $smartphone->Gewicht; ?></td>
                             <td><?= $smartphone->Simlockvrij; ?></td>
