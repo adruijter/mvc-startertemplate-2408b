@@ -298,7 +298,6 @@ VALUES
 
 
  
-
 -- Step: 12
 -- *****************************************************************************************************
 -- Doel : Maak een nieuwe tabel aan met de naam Zangeres
@@ -352,3 +351,6 @@ VALUES
  ,('Taylor Swift', 570,'Verenigde Staten', '+13421 231356', 34, 1, NULL, SYSDATE(6), SYSDATE(6))
  ,('Beyoncé', 420,'Verenigde Staten', '+18723 213481', 41, 1, NULL, SYSDATE(6), SYSDATE(6))
  ,('Jennifer Lopez', 400,'Verenigde Staten', '+16254 751243', 54, 1, NULL, SYSDATE(6), SYSDATE(6));
+
+
+ 

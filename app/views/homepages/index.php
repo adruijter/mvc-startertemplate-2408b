@@ -11,7 +11,8 @@
             <h3><?php echo $data['title']; ?></h3>
 
             <a href="<?= URLROOT; ?>/smartphones/index ">Toon smartphones</a> |
-            <a href="<?= URLROOT; ?>/sneakers/index">Mooiste Sneakers</a>
+            <a href="<?= URLROOT; ?>/sneakers/index">Mooiste Sneakers</a> |
+            <a href="<?= URLROOT; ?>/zangeressen/index">Rijkste Zangeressen</a>
 
         </div>
         
