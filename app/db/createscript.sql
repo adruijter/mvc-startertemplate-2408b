@@ -407,7 +407,3 @@ VALUES
 ,('Equifax Hack', '2017', 147, 'Datalek', 700, 1, NULL, SYSDATE(6), SYSDATE(6))
 ,('Target Hack', '2013', 110, 'Creditcardgegevens gestolen', 18.5, 1, NULL, SYSDATE(6), SYSDATE(6))
 ,('Marriott Hack', '2014',  500, 'Datalek', 100, 1, NULL, SYSDATE(6), SYSDATE(6));
- 
-
-
- 
