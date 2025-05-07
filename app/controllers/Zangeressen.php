@@ -23,4 +23,16 @@ class Zangeressen extends BaseController
 
         $this->view('zangeressen/index', $data);
     }
+
+    public function delete($id)
+    {
+        $result = $this->zangeressenModel->delete($id);
+
+        $data = [
+            'message'=> 'Het record is verwijderd!',
+        ];
+        
+        $this->view('zangeressen/delete', $data);
+        header('Refresh:3 ; url=' . URLROOT . '/zangeressen/index');
+    }
 }
