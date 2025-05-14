@@ -10,6 +10,15 @@
         <div class="col-1"></div>
     </div>
 
+    <div class="row mt-3">
+        <div class="col-1"></div>
+        <div class="col-10">
+             <a class="btn btn-outline-success" href="<?= URLROOT; ?>/zangeressen/create" role="button">Nieuwe zangeres</a>
+        </div>
+        <div class="col-1"></div>
+    </div>
+   
+
 
     <div class="row mt-3">
         <div class="col-1"></div>
