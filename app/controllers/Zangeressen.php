@@ -35,4 +35,24 @@ class Zangeressen extends BaseController
         $this->view('zangeressen/delete', $data);
         header('Refresh:3 ; url=' . URLROOT . '/zangeressen/index');
     }
+
+    public function create()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == "POST")
+        {
+            $result = $this->zangeressenModel->insertZangeres($_POST);
+
+            echo "<div class='alert alert-success text-center'><h5>De zangeres is ingevoerd</h5></div>";
+
+            header ('Refresh:3 ; url=' . URLROOT . '/zangeressen/index');
+
+        }
+
+
+        $data = [
+            'title' => 'Nieuwe zangeres toevoegen'
+        ];
+
+        $this->view('zangeressen/create', $data);
+    }
 }

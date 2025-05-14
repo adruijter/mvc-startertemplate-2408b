@@ -40,4 +40,27 @@ class ZangeressenModel
 
         return $this->db->execute();
     }
+
+
+    public function insertZangeres($post)
+    {
+        $sql = "INSERT INTO zangeres (Naam
+                                     ,Nettowaarde
+                                     ,Land
+                                     ,Mobiel
+                                     ,Leeftijd)
+                VALUES              (:naam
+                                    ,:nettowaarde
+                                    ,:land
+                                    ,:mobiel
+                                    ,:leeftijd)";
+
+        $this->db->query($sql);
+        $this->db->bind(':naam', $post['naam'], PDO::PARAM_STR);
+        $this->db->bind(':nettowaarde', $post['nettowaarde'], PDO::PARAM_INT);
+        $this->db->bind(':land', $post['land'], PDO::PARAM_STR);
+        $this->db->bind(':mobiel', $post['mobiel'], PDO::PARAM_STR);
+        $this->db->bind(':leeftijd', $post['leeftijd'], PDO::PARAM_INT);
+        $this->db->execute();
+    }
 }
