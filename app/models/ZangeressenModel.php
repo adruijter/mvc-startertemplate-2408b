@@ -24,7 +24,9 @@ class ZangeressenModel
         
                 FROM Zangeres as ZARS
                 
-                ORDER BY ZARS.Leeftijd DESC';
+                ORDER BY ZARS.Nettowaarde DESC
+                
+                LIMIT 5';
 
         $this->db->query($sql);
 

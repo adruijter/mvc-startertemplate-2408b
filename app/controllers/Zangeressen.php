@@ -40,11 +40,24 @@ class Zangeressen extends BaseController
     {
         if ($_SERVER['REQUEST_METHOD'] == "POST")
         {
-            $result = $this->zangeressenModel->insertZangeres($_POST);
+            if (
+                empty($_POST['naam']) || 
+                empty($_POST['nettowaarde']) || 
+                empty($_POST['land']) || 
+                empty($_POST['mobiel']) || 
+                empty($_POST['leeftijd']))
+            {
+                echo "<div class='alert alert-danger text-center'><h5>Niet alle velden zijn ingevuld!</h5></div>";
+                header('Refresh:3 ; url=' . URLROOT . '/zangeressen/create');
+                
+            } else {
+                $result = $this->zangeressenModel->insertZangeres($_POST);
+                echo "<div class='alert alert-success text-center'><h5>De zangeres is ingevoerd</h5></div>";
+                header ('Refresh:3 ; url=' . URLROOT . '/zangeressen/index');
 
-            echo "<div class='alert alert-success text-center'><h5>De zangeres is ingevoerd</h5></div>";
+            }
 
-            header ('Refresh:3 ; url=' . URLROOT . '/zangeressen/index');
+
 
         }
 
