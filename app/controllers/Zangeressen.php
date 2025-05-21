@@ -68,4 +68,24 @@ class Zangeressen extends BaseController
 
         $this->view('zangeressen/create', $data);
     }
+
+    public function update($id = NULL)
+    {
+        $data = [
+            'title' => 'Wijzig de zangeres'
+        ];
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $result = $this->zangeressenModel->updateZangeresById($_POST);
+            $id = $_POST['id'];
+            header('Refresh:3 ; url=' . URLROOT . '/zangeressen/index');
+        }
+
+        $result = $this->zangeressenModel->getZangeresById($id);
+
+        $data['zangeressen'] = $result;
+
+        $this->view('zangeressen/update', $data);
+    }
 }
