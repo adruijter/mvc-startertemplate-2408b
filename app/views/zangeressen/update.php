@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6">
-            <h3 class="text-danger text-begin"><?= $data['title']; ?></h3>
+            <h3 class="text-success text-begin"><?= $data['title']; ?></h3>
         </div>
         <div class="col-3"></div>
     </div>
